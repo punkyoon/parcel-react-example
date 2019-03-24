@@ -8,8 +8,12 @@ export default class NotFound extends React.Component {
         return (
             <Base>
                 <Title>Page Not Found</Title>
-                <Video src="https://www.youtube-nocookie.com/embed/K6DWMGd0cPY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
-                </Video>
+                <Video
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    frameBorder="0"
+                    src="https://www.youtube-nocookie.com/embed/K6DWMGd0cPY"
+                />
             </Base>
         );
     }

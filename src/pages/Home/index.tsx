@@ -9,7 +9,7 @@ export default class Home extends React.Component {
         return (
             <Base>
                 <Title>Home</Title>
-                <Link to='/about'>About cute Pokémon</Link>
+                <Link to='about'>About cute Pokémon</Link>
             </Base>
         );
     }
