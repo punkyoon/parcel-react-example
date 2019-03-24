@@ -1,27 +1,25 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
 import styled from 'styled-components'
 
-import About from './components/About';
-import Home from './components/Home';
-import NotFound from './components/NotFound';
+const About = lazy(() => import('./pages/About'));
+const Home = lazy(() => import('./pages/Home'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 
 export default class App extends React.Component {
     render() {
         return (
             <Router>
-                <Base>
+                <Suspense fallback={<div>Loading...</div>}>
                     <Switch>
                         <Route exact path="/" component={Home}/>
                         <Route path="/about" component={About}/>
                         <Route component={NotFound}/>
                     </Switch>
-                </Base>
+                </Suspense>
             </Router>
         );
     }
 }
-
-const Base = styled.div``;

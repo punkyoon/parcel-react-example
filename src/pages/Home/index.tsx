@@ -16,4 +16,6 @@ export default class Home extends React.Component {
 }
 
 const Base = styled.div``;
-const Title = styled.h1``;
+const Title = styled.h1`
+    font-family: Roboto, sans-serif;
+`;

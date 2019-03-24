@@ -16,8 +16,11 @@ export default class NotFound extends React.Component {
 }
 
 const Base = styled.div``;
-const Title = styled.h1``;
+const Title = styled.h1`
+    font-family: Roboto, sans-serif;
+`;
 const Video = styled.iframe`
+    border: none;
     height:315px;
     width: 560px
 `;
