@@ -1,28 +1,25 @@
 import React from 'react';
-
 import styled from 'styled-components'
 
 
-export default class About extends React.Component {
-    render() {
-        return (
-            <Base>
-                <Wrapper>
-                    <Title>About Snorlax</Title>
-                    <Hr />
-                    <Image src={require(`../../imgs/snorlax.png`)} />
-                    <Description>Snorlax is cute Pokémon.</Description>
-                </Wrapper>
+const About: React.FunctionComponent = () => {
+    return (
+        <Base>
+            <Wrapper>
+                <Title>About Snorlax</Title>
+                <Hr />
+                <Image src={require(`../../imgs/snorlax.png`)} />
+                <Description>Snorlax is cute Pokémon.</Description>
+            </Wrapper>
 
-                <Wrapper>
-                    <Title>About Munchlax</Title>
-                    <Hr />
-                    <Image src={require(`../../imgs/munchlax.png`)} />
-                    <Description>Munchlax is also cute Pokémon.</Description>
-                </Wrapper>
-            </Base>
-        );
-    }
+            <Wrapper>
+                <Title>About Munchlax</Title>
+                <Hr />
+                <Image src={require(`../../imgs/munchlax.png`)} />
+                <Description>Munchlax is also cute Pokémon.</Description>
+            </Wrapper>
+        </Base>
+    );
 }
 
 const Base = styled.div``;
@@ -46,3 +43,5 @@ const Image = styled.img`
 const Description = styled.div`
     font-family: Roboto, sans-serif;
 `;
+
+export default About;
