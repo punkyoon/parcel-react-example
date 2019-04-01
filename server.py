@@ -16,6 +16,8 @@ def login():
     password = data.get('password')
 
     if username == 'test' and password == 'test':
-        return jsonify({'detail': 'success'}), 200
+        return jsonify({
+            'username': username,
+            'age': 3901,
+        }), 200
     return jsonify({'detail': 'Wrong username or password'}), 400
-

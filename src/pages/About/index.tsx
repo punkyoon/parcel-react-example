@@ -1,10 +1,17 @@
+import { inject, observer } from "mobx-react";
 import React from 'react';
 import styled from 'styled-components'
 
 
-const About: React.FunctionComponent = () => {
+interface Props {
+    user: any;
+}
+
+const About: React.FunctionComponent<Props> = ({ user }) => {
     return (
         <Base>
+            {user.user && <Title>Hello {user.user.username}</Title>}
+
             <Wrapper>
                 <Title>About Snorlax</Title>
                 <Hr />
@@ -44,4 +51,4 @@ const Description = styled.div`
     font-family: Roboto, sans-serif;
 `;
 
-export default About;
+export default inject('user')(observer(About));
